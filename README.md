@@ -1,7 +1,7 @@
 # Programming Language Project
 **By** Makaela Myers
 
-# Assignment 1: Language overview and setup
+# Assignment 1: Language Overview and Setup
 
 ## History of Javascript
 
@@ -98,11 +98,126 @@ Writing a 'Hello World!' program on the Client side:
 </html>
 ```
 
-## Project Resources
+
+# Assignment 2: Data Types and Naming Conventions
+
+
+## Naming Conventions
+Below are the variable naming requirements in JavaScript, as well as naming convention community standards.
+
+1. No spaces allowed
+2. Only letters, digits, underscores, and dollar signs are permitted in variable names
+3. Case matters when it comes to variable names
+4. A letter (alphabet), an underscore (_), or a dollar sign ($) 
+  must be the first character in a variable name
+5. Certain terms such as reserved words in JavaScript
+  shouldn't be used to name variables (community standard)
+6. Camel casing (ex: camelCase) is the preferred naming convention (community standard)
+
+
+## Data Types 
+
+In JavaScript, any data type can be put in a variable, and a variable can at any point be changed from a string to a number and vice versa. This kind of programming is called "dynamically typed", which means data types exist in the language but variables can be changed from one data type to another.
+
+
+
+
+### Number
+
+In JavaScript, the number type represents both integers and floating point numbers, meaning there are no separate ints and floats. There are no restrictions with adding numbers together wether they are whole numbers or decimals.
+
+`let num = 5;`
+
+
+### String
+
+A string must be surrounded by one of three different kinds of quotes -- single quotes, double quotes, or backticks.
+
+```
+let example1 = 'This is single quotes';
+
+let example2 = "This is double quotes";
+```
+
+
+Backticks allow us to insert variables and expressions into a string by using ${...}
+
+```
+let quoteType = "backticks";
+
+ alert(`This is ${backticks}`);
+```
+
+
+### Boolean
+
+A boolean can only be one of two values: true or false. It is usually used to store yes or no values, with yes meaning true and no meaning false.
+
+`let isActive = true;`
+
+
+### Null
+
+The "null" value represents "nothing", "empty", or "value unknown".
+
+`let name = null;`
+
+
+### Undefined
+
+The "undefined" value means that a variable has been declared, but not assigned.
+
+`let name;`
+
+
+### Objects
+
+An object is a variable that contains many values.
+
+`const myDog = {name: "Pretzel", age: 3, breed: "Mixed", color: "Blonde"};
+
+
+### typeof
+
+The typeof operator returns the type of data type.
+
+```
+typeof 5
+typeof "five"
+typeof true
+```
+
+
+### Dictionary
+
+A dictionary is a collection of key-value pairs and is implemented using objects.
+
+```
+let dictionary = {};
+dictionary["Goose"] = "Cat";
+dictionary["Pretzel"] = "Dog";
+dictionary["Georgia"] = "Cat";
+dictionary["Christmas"] = "Cat";
+```
+
+
+### Array
+
+An array holds many values under one variable name. Different datatypes (ex: string, number) can be added to the same array.
+
+`let arrTest = ["Goose", 1, "Pretzel", 3];`
+
+
+
+
+# Project Resources
 
 - https://www.geeksforgeeks.org/history-of-javascript/
 - https://www.w3schools.com/js/
 - https://www.geeksforgeeks.org/javascript/
 - https://www.udemy.com/course/the-complete-javascript-course/
 - https://javascript.info/
+- https://www.geeksforgeeks.org/what-are-the-variable-naming-conventions-in-javascript/
+- https://javascript.info/types
+- https://www.w3schools.com/js/js_arrays.asp
 - JavaScript for kids: a playful introduction to programming by Nick Morgan
