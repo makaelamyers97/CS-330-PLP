@@ -209,6 +209,83 @@ An array holds many values under one variable name. Different datatypes (ex: str
 
 
 
+# Assignment 3: If/Else, Switch, Logical Operators
+
+- The boolean values in Javascript are `true` and `false`
+- Available conditional statements in Javascript include `if`, `else if`, `else`, `nested if-else`, `switch`, and the `ternary operator`
+- JavaScript supports short-circuit evaluation by reading an expression from left to right and stopping when a result is determined -- there is the `AND(&&)` short circuit and the `OR(||)` short circuit
+- The ["dangling-else"](https://www.geeksforgeeks.org/dangling-else-ambiguity/) problem in JavaScript can be solved by using braces and indentation or to use the if/else if/else format
+- When using a switch statement in JavaScript, a `break` statement must be used after each case -- a continue statement cannot be used
+
+
+### One-condition if/else statement
+
+```
+x = 2;
+if (x == 2) {
+  console.log("Nice, x does equal 2!");
+} else {
+  console.log("Whoops, x does not equal 2.");
+}
+```
+
+### Multi-condition if/else statement
+
+```
+x = 2;
+y = 16;
+if (x == 2 && y > 8) {
+  console.log("This if-statement works!");
+} else {
+  console.log("This if-statement does not work.");
+}
+```
+
+### if/elif/else statements
+
+```
+x = 2;
+y = 16;
+if (x > 5) {
+  console.log("The if-statement works.");
+} else if (x < 5 && y > 10) {
+  console.log("The else-if statement works.");
+} else {
+  console.log("None of the statements work.");
+}
+```
+
+### Short-circuit logic
+
+```
+const result =
+  true ||
+  (console.log(
+    "This expression will not be read because the one to the left will be read first and it is true, therefore it will execute"
+  ),
+  false);
+console.log(result);
+```
+
+### Switch-case statement
+
+```
+x = 3
+switch(x) {
+    case 1:
+        console.log("Case 1 works.");
+        break;
+    case 2:
+        console.log("Case 2 works.");
+        break;
+    case 3:
+        console.log("Case 3 works.");
+        break;
+    default:
+        console.log("None of the cases work.");
+}
+```
+
 
 # Project Resources
 
