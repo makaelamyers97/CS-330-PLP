@@ -287,6 +287,123 @@ switch(x) {
 ```
 
 
+# Assignment 4: Loops and Functions
+
+### While-loop
+
+A while-loop holds a condition within the parethisis, in this case ```x <= 5```, and as long as that is true the body within the while-loop will execute, which in this case is `console.log(x)` and `x++`.
+```
+x = 0;
+while (x <= 5) {
+  console.log(x);
+  x++;
+}
+```
+
+### Do-while loop
+
+A do-while loop is similar to a while-loop, however the body executes first before reaching the while-condition. This method is preferred if the code should run at least once regardless of the while-condition.
+```
+x = 0;
+do {
+  console.log(x);
+  x++;
+} while (x <= 5);
+```
+
+### For-loop
+
+In a for-loop, the loop begins at the beginning starting point where it is instructed, in this case `let x = 0`. It then moves onto the condition, `x <= 5`, which would mean that this loop will continue running until x has a value less than or equal to 5. The last part, `x++`, is saying how much to change x by each time the loop iterates. Then the body, `console.log(x)`, says what action to perform each time this loop executes as true.
+
+```
+for (let x = 0; x <= 5; x++) {
+  console.log(x);
+}
+```
+
+### Functions
+
+Functions allow code to be called many times without repetition. It is best practice to place functions anywhere in your file as long as its defined before you try to call it - however, browsers will automatically move functions to the top of the code through a process called "hoisting". 
+
+The below function takes in two numbers, `x` and `y`, multiplies them, and returns them as `z`. Note that JavaScript functions can:
+- take in multiple parameters
+- accept parameters of different data types
+
+```
+function multiplyNumbers(x, y) {
+  z = x * y;
+  return z;
+}
+
+sum = multiplyNumbers(2, 3);
+
+console.log(sum);
+```
+
+The below function finds the factorial of a number and is an example of a recursive function, which is when a function calls itself. 
+
+```
+function findFactorial(x) {
+  if (x <= 1) {
+    return 1;
+  } else {
+    return x * findFactorial(x - 1);
+  }
+}
+
+factorial = findFactorial(3);
+
+console.log(factorial);
+```
+
+The below function takes in a string and splits it into two strings, then returns both strings. Note that the function is able to return multiple values at the same time by returning the elements as an array - this could also be done by returning the elements as an object.
+
+```
+function stringSplit(string) {
+  stringSize = string.length;
+  halfOfString = stringSize / 2;
+  firstString = string.slice(0, halfOfString);
+  secondString = string.slice(halfOfString);
+  return [firstString, secondString];
+}
+
+twoStrings = stringSplit(
+  "This function takes in a string and splits it into two strings, then returns both strings."
+);
+
+console.log(twoStrings);
+```
+
+### Pass-by-Value and Pass-by-Reference
+
+Variables in JavaScript can either be passed by value or passed by reference, depending on the type of data they hold.
+
+Primitive data types (such as those listed below) are passed by value - this is when a variable is passed to a function, but it is a copy of that variable's value that is passed and not the original variable itself. So any changes to the variable within the function will not affect the variable outside the function.
+
+- Numbers
+- Strings
+- Booleans
+- Undefined
+- Null
+- Symbol
+- BigInt
+
+Non-primitive data types, such as objects and arrays, are passed by reference - however, JavaScript does not support true pass-by-reference. Instead, JavaScript passes the reference value so that the data type can be modified but the original variable cannot be reassigned within the function.
+
+### Example of Pass-By-Value
+
+```
+function passBy(x) {
+   x = 3;
+   console.log(x);
+}
+
+let x = 2;
+passBy(x);
+console.log(x);
+```
+
+
 # Project Resources
 
 - https://www.geeksforgeeks.org/history-of-javascript/
