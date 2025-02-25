@@ -403,6 +403,80 @@ passBy(x);
 console.log(x);
 ```
 
+# Assignment 5: Classes and Inheritance
+
+A JavaScript class is not an object, but it can be used to create objects.
+
+Create a class using the word `class`, then add a method named `constructor()`.
+
+```
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+```
+
+To create objects:
+
+```
+const person1 = new Person("Jane Doe", 54);
+const person2 = new Person("John Doe", 62);
+```
+
+Add methods after the constructor. Methods act as functions.
+
+```
+class Person {
+  constructor(name, by) {
+    this.name = name;
+    this.birthYear = by;
+  }
+  name() {
+    return this.name;
+  }
+  age() {
+    const d = new Date();
+    let currentYear = d.getFullYear();
+    return currentYear - by;
+  }
+}
+
+const person3 = new Person("Jane Doe", 54);
+```
+
+To call a method:
+
+```
+console.log(person1.age());
+```
+
+Class Inheritance - `super()` allows you to pull attributes from the Person object. JavaScript does not support multiple inheritance.
+
+```
+class Student extends Person {
+  constructor(name, by, grade, major) {
+    super(name, by);
+    this.grade = grade;
+    this.major = major;
+  }
+  info() {
+    return this.name + " is a " + this.grade + " majoring in " + this.major;
+  }
+}
+
+let person4 = new Student("Bob", 1997, "Junior", "Education");
+console.log(person4.info());
+```
+
+To modify an object variable:
+
+```
+person4.grade = "Business Management";
+```
+
+JavaScript does not support method overloading. If there are multiple methods with the same name, the last one will override all the others.
 
 # Project Resources
 
